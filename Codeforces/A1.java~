@@ -1,0 +1,13 @@
+import java.util.*;
+public class A1 {
+    public static void main (String [] args){
+        Scanner sc=new Scanner(System.in);
+        int m=sc.nextInt();
+        int n=sc.nextInt();
+        int a=sc.nextInt();
+        int sum=0;
+        sum+= Math.ceil (m/a);
+        sum+=Math.ceil(n/a);
+        System.out.println(sum);
+    }
+}

@@ -1,0 +1,19 @@
+import util.java.*;
+public class A118{
+    public static void main (String [] args){
+        Scanner sc=new Scanner (System.in);
+        String st=sc.next();
+        String s[]=st.split("");
+        String [] b={"b","c","d","f","g","h","j","k","l","m","n","p","q","r","s","t","v","w","x","y","z"};
+        String [] c={"B","C","D","F","G","H","J","K","L","M","N","P","Q","R","S","T","V","W","X","Y","Z"};
+        for (int i=0;i<s.length;i++){
+            for (int j=0;j<b.length;j++){
+                if(s[i].equals(b[j]) || s[i].equals(c[j])){
+                    System.out.print("."+b[j]);
+                    break;
+                }
+            }
+        }
+        System.out.println();
+    }
+}

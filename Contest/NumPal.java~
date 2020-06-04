@@ -1,0 +1,66 @@
+import java.util.*;
+public class NumPal {
+    public static boolean P(String q){
+        boolean o=false;
+        if(q!=null && q.length()>0){
+            o=true;
+            char [] c=q.toCharArray();
+            
+            for(int i=0;i<c.length/2;i++){
+                if(c[i]!=c[c.length-1-i]){
+                    o= false;
+                    break;
+                }
+            }
+            
+        }
+        return o;
+    }
+    public static void R(String [] a){
+        for (int i=0;i<a.length/2;i++){
+            String t=a[i];
+            a[i]=a[a.length-1-i];
+            a[a.length-1-i]=t;
+        }
+    }
+    public static int Z(String [] a){
+        int no=0;
+        for (int i=0;i<a.length;i++){
+            no+=Integer.parseInt(a[i]);
+        }
+        return no;
+    }
+            
+        
+        
+        
+    public static void main (String [] args) {
+        Scanner sc=new Scanner(System.in);
+        int n=sc.nextInt();
+        for (int i=1;i<=n;i++){
+            int num=sc.nextInt();
+            String s=Integer.toString(num);
+            for (;(!P(s));){
+                int temp=Integer.parseInt(s);
+                String b[]=s.split("");
+                R(b);
+                num=temp+Z(b);
+                s=Integer.toString(num);
+            }
+            System.out.println(s);
+        }
+        
+    }
+}
+                
+                
+                
+                
+                
+                
+            
+        
+        
+        
+                        
+        
